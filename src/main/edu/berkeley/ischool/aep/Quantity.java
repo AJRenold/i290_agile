@@ -25,6 +25,7 @@ public class Quantity implements Comparable<Quantity>{
     }
 
     public static Object best(List quantity_list) {
+        if(quantity_list == null) throw new NullPointerException();
         Collections.sort(quantity_list);
         return quantity_list.get(0);
     }

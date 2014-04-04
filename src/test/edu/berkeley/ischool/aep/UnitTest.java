@@ -1,19 +1,15 @@
 package edu.berkeley.ischool.aep;
 
-import org.junit.Test;
-
-import static junit.framework.Assert.*;
-
 /**
  * Created by ajrenold on 2/7/14.
  */
 public class UnitTest {
-
+    /*
     @Test
     public void twelveInchesEqualsOneFoot() {
         assertEquals(new Inches(12), UnitConverter.FeetToInches(new Feet(1)));
         assertEquals(new Inches(24), UnitConverter.FeetToInches(new Feet(2)));
-    }
+    }*/
 
     // 3 ft = 1 yard
 

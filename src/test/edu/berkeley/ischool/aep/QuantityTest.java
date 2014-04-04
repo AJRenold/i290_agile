@@ -58,7 +58,7 @@ public class QuantityTest {
     // 10F, 2Y, 3Y, 4Y = 4Y is best
     // with Lists
     @Test(expected = RuntimeException.class)
-    public void findBestDistanceException(){
+    public void findBestDistanceRuntimeException(){
 
         List<ArithmeticQuantity> quantity_list = new ArrayList<ArithmeticQuantity>();
         quantity_list.add(new ArithmeticQuantity(10, Volume.CUP));
@@ -68,6 +68,17 @@ public class QuantityTest {
 
         assertEquals(Quantity.best(quantity_list), new ArithmeticQuantity(4, Distance.YARDS));
 
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void findBestDistanceNullException(){
+        assertEquals(Quantity.best(null), new ArithmeticQuantity(4, Distance.YARDS));
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void findBestDistanceArrayIndexException(){
+        List<ArithmeticQuantity> quantity_list = new ArrayList<ArithmeticQuantity>();
+        assertEquals(Quantity.best(quantity_list), new ArithmeticQuantity(4, Distance.YARDS));
     }
 
     // 1C > 0C
